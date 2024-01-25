@@ -38,7 +38,8 @@ Alumno: Francisco Romero
 
 - **Video de prueba**: Muestra las funcionalidades de la web. También podrán verlo en el feed de la web (recomendado). Sin embargo también dejaré el link aquí también.
 
-<iframe width="560" height="315" src="[https://www.youtube.com/embed/TUehYxEzR50](https://www.youtube.com/watch?v=J4oz7WJWYMw)" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=J4oz7WJWYMw" frameborder="0" allowfullscreen></iframe>
+
 
   
 - **Casos de prueba:** Los casos de prueba están presentes en el archivo con el mismo nombre. Es un archivo de Excel donde pude ir documentando mientras testeaba la web antes de la entrega.
