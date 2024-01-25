@@ -38,7 +38,7 @@ Alumno: Francisco Romero
 
 - **Video de prueba**: Muestra las funcionalidades de la web. También podrán verlo en el feed de la web (recomendado). Sin embargo también dejaré el link aquí también.
 
-[![Alt Text](https://imgur.com/a/cEiSL84)](https://www.youtube.com/watch?v=J4oz7WJWYMw)
+[![Alt Text](https://i.imgur.com/Ars49SC.png)](https://www.youtube.com/watch?v=J4oz7WJWYMw)
 
 
 
