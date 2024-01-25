@@ -11,30 +11,30 @@ class RegistrarUsuario(UserCreationForm):  #Esto lo podemos usar en las viewa
     first_name = forms.CharField(max_length=100,
                                  label="", 
                                  required=True,
-                                 widget=forms.TextInput(attrs={'placeholder': 'Nombre','style': 'font-size: 12px;'
+                                 widget=forms.TextInput(attrs={'placeholder': 'Nombre','style': 'font-size: 7px;'
                                                                }))
     username = forms.CharField(
                             max_length=100,label="",
                             required=True,
-                            widget=forms.TextInput(attrs={'placeholder': 'Nombre de usuario', 'style': 'font-size: 12px;'
+                            widget=forms.TextInput(attrs={'placeholder': 'Nombre de usuario', 'style': 'font-size: 7px;'
                                                                         }))
     email = forms.EmailField(
                             required=True,
                              label="",
-                             widget=forms.TextInput(attrs={'placeholder': 'E-mail','style': 'font-size: 12px;'
+                             widget=forms.TextInput(attrs={'placeholder': 'E-mail','style': 'font-size: 7px;'
                                                            }))
     
     password1 = forms.CharField(
                                 max_length=100,
                                 label="",
-                                widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña', 'style': 'font-size: 12px; color: white;'}),
+                                widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña', 'style': 'font-size: 7px; color: white;'}),
                                 required=True,
                                 help_text="La contraseña debe tener más de 6 carácteres, números y letras",
                                 )
 
     password2 = forms.CharField(max_length=100, 
                                 label="", 
-                                widget=forms.PasswordInput(attrs={'placeholder': 'Confirmar contraseña','style': 'font-size: 12px;'}), 
+                                widget=forms.PasswordInput(attrs={'placeholder': 'Confirmar contraseña','style': 'font-size: 7px;'}), 
                                 required=True
                                 )
     

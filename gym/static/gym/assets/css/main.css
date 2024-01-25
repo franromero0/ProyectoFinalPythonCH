@@ -788,10 +788,12 @@ a.mobile-show {
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-size: 50px;
+  font-size: 12px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #fff;
+  color: transparent;
+  z-index: 999;
+  
 }
 
 .search-bar-tablecell button[type=submit] {
@@ -826,6 +828,7 @@ a.mobile-show {
 
 .search-area {
   visibility: hidden;
+  z-index: 999;
   opacity: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;

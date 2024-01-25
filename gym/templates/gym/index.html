@@ -46,11 +46,13 @@
     <!--PreLoader Ends-->
 	
 	<!-- header -->
-	<div class="top-header-area" id="sticker">
+	{% block headerEdit %}
+	<div class="top-header-area"  id="sticker">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 text-center">
 					<div class="main-menu-wrap">
+	{% endblock %}
 						<!-- logo -->
 						{% if user.is_authenticated %}
 						<div class="site-logo">
@@ -99,8 +101,6 @@
 							</ul>
 							{% endif %}
 						</nav>
-						<a class="mobile-show bordered-btn" href="#"></a> 
-						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>
 				</div>
