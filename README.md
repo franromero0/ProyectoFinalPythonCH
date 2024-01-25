@@ -53,7 +53,7 @@
   
 - **Casos de prueba:** Los casos de prueba están presentes en el archivo con el mismo nombre. Es un archivo de Excel donde pude ir documentando mientras testeaba la web antes de la entrega.
 
-[LINK CASOS de PRUEBA]([URL](https://github.com/franromero0/ProyectoFinalPythonCH/blob/main/Casos%20de%20prueba.xlsx))
+[LINK CASOS de PRUEBA](https://github.com/franromero0/ProyectoFinalPythonCH/blob/main/Casos%20de%20prueba.xlsx)
 
 
 
