@@ -10,8 +10,6 @@ Alumno: Francisco Romero
 
 
 
-## Versión
-1.0
 
 ## Descripción del Proyecto
 
@@ -19,24 +17,36 @@ Alumno: Francisco Romero
 
   - Vistas de **autenticación, registro y logout**. Para poder ingresar a la web, ya que es solo para clientes de la empresa, necesitarás registrarte o en su defecto inciar sesión.
   - Dentro de la barra de navegación encontraremos el acceso a las diferentes **pages** que la página contiene:
-                                                                                                            - **Home:** Es el verdadero 'inicio' de la web. En ella encontraremos diferentes accesos para poder interactuar con la página de manera muy sencilla.
-                                                                                                            - **About:** En esta vista podremos ver una breve descripción del proyecto además de contar con una sección de 'About Me' donde me presento y les cuento un poco sobre mí.
-                                                                                                            - **Aire libre:** La empresa organiza eventos deportivos como "trekking" o "montañismo".  Aquí estarán presentes todos los modelos(eventos) a los que los clientes se podrán anotar en una posterior versión.
-                                                                                                            -**GYM:** Al igual que la vista anterior, en 'GYM' veremos las actividades que se realizan en el establecimiento(gimnasio). Estas actividades al igual que 'Aire libre' se pueden cargar/crear desde estas mismas páginas.
-                                                                                                            -**Búsqueda:** Partiendo de la idea de que en el gimnasio se realicen numerosas actividades diferentes, en esta page podremos buscar de manera sencilla entre actividades del modelo OutDoor como el de Gym.
-                                                                                                            - Otras vistas importantes para la web son los formularios. Estos están presentes al **editar, crear, actualizar perfil o avatar.** Recomiendo verlas directamente en la página.
+
+                                                                              - **Home:** Es el verdadero 'inicio' de la web. En ella encontraremos diferentes accesos para poder interactuar con la página de manera muy sencilla.
+                                                                              - **About:** En esta vista podremos ver una breve descripción del proyecto además de contar con una sección de 'About Me' donde me presento y les cuento un poco                                                                                                                             sobre mí.
+                                                                              - **Aire libre:** La empresa organiza eventos deportivos como "trekking" o "montañismo".  Aquí estarán presentes todos los modelos(eventos) a los que los clientes                                                                                                                               se podrán anotar en una posterior versión.
+                                                                              -**GYM:** Al igual que la vista anterior, en 'GYM' veremos las actividades que se realizan en el establecimiento(gimnasio). Estas actividades al igual que 'Aire                                                                                                                         libre' se pueden cargar/crear desde estas mismas páginas.
+                                                                              -**Búsqueda:** Partiendo de la idea de que en el gimnasio se realicen numerosas actividades diferentes, en esta page podremos buscar de manera sencilla entre                                                                                                                                   actividades del modelo OutDoor como el de Gym.
+                                                                              - Otras vistas importantes para la web son los formularios. Estos están presentes al **editar, crear, actualizar perfil o avatar.** Recomiendo verlas directamente                                                                                                                en la página.
                                                                                                          
 
 - En la web el **CRUD** está presente de la siguiente manera:
-                                                          **Create:** Al crear modelos mediante los botones de "agregar actividad / evento" en sus respectivas pages. Al igual que cuando registramos un nuevo usuario.
-                                                          **Read:** Cuando hacemos click en la barra de navegación de los respectivos modelos 'Aire libre' y 'GYM' podremos observar que los modelos que están al ingresar son los que creamos con la opción anterior.
-                                                                    También está presente cuando buscamos entre los modelos accediendo al botón 'Buscar'. Que apreciaremos los resultados si realizamos una búsqueda entre los datos ya existentes.
-                                                          **Update:** Podemos actualizar todo en la web. Desde el perfil y el avatar hasta todos y cada uno de los modelos ya creados o que vayamos creando.
-                                                          **Delete:** Esta parte del CRUD está presente en los modelos 'OutDoor' y 'Gym'. Si clickeamos en el botón eliminar el objeto se eliminará de la DB. Por lo que ya no aparecerá en el feed de actividades.
+  
+                                                      **Create:** Al crear modelos mediante los botones de "agregar actividad / evento" en sus respectivas pages. Al igual que cuando registramos un nuevo usuario.
+                                                      **Read:** Cuando hacemos click en la barra de navegación de los respectivos modelos 'Aire libre' y 'GYM' podremos observar que los modelos que están al ingresar son los que creamos con la opción anterior.
+                                                                También está presente cuando buscamos entre los modelos accediendo al botón 'Buscar'. Que apreciaremos los resultados si realizamos una búsqueda entre los datos ya existentes.
+                                                      **Update:** Podemos actualizar todo en la web. Desde el perfil y el avatar hasta todos y cada uno de los modelos ya creados o que vayamos creando.
+                                                      **Delete:** Esta parte del CRUD está presente en los modelos 'OutDoor' y 'Gym'. Si clickeamos en el botón eliminar el objeto se eliminará de la DB. Por lo que ya no aparecerá en el feed de actividades.
+
+
+
+- **Video de prueba**: Muestra las funcionalidades de la web. También podrán verlo en el feed de la web (recomendado). Sin embargo también dejaré el link aquí también.
+
+<iframe width="560" height="315" src="[https://www.youtube.com/embed/TUehYxEzR50](https://www.youtube.com/watch?v=J4oz7WJWYMw)" frameborder="0" allowfullscreen></iframe>
 
   
 - **Casos de prueba:** Los casos de prueba están presentes en el archivo con el mismo nombre. Es un archivo de Excel donde pude ir documentando mientras testeaba la web antes de la entrega.
-                                                                      
+
+
+
+## Versión
+1.0                                                                     
                                           
 ## Tecnología Utilizada
 ### Front-End
