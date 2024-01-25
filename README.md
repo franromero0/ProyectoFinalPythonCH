@@ -6,8 +6,9 @@ Alumno: Francisco Romero
 ## Nombre del Proyecto
 Franci's GYM & OutDoor
 
+![Franci's GYM & OutDoor]([URL de la imagen](https://i.imgur.com/zhwhbLs.png))
 
-![]((https://imgur.com/a/cEiSL84)
+
 
 ## Versión
 1.0
