@@ -1,17 +1,18 @@
-#Proyecto Final Coder House - Python
+# Proyecto Final Coder House - Python
 
 Comisión: 50195
 Alumno: Francisco Romero
 
-##Nombre del Proyecto
+## Nombre del Proyecto
 Franci's GYM & OutDoor
 
-![Franci's GYM & OutDoor](https://imgur.com/a/cEiSL84)
 
-##Versión
+![]((https://imgur.com/a/cEiSL84)
+
+## Versión
 1.0
 
-##Descripción del Proyecto
+## Descripción del Proyecto
 
 **La página web está ideada para una empresa dedicada al sector del bienestar y acondicionamiento físico que utiliza la misma como plataforma para/con sus clientes. En ella podremos encontrar las siguientes funcionalidades:**
 
@@ -36,13 +37,13 @@ Franci's GYM & OutDoor
 - **Casos de prueba:** Los casos de prueba están presentes en el archivo con el mismo nombre. Es un archivo de Excel donde pude ir documentando mientras testeaba la web antes de la entrega.
                                                                       
                                           
-##Tecnología Utilizada
-###Front-End
+## Tecnología Utilizada
+### Front-End
 - HTML 5
 - CSS 3
 - Javascript 
 - Bootstrap 
-###Back-End
+### Back-End
 - Python 3.12.1
 - Django 5.0
 
