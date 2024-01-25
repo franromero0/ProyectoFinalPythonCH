@@ -13,22 +13,22 @@
             <div class="col-lg-9 offset-lg-2 text-center">
                 <div class="hero-text">
                     <div class="hero-text-tablecell">
-                        <div class="search-bar-tablecell">
+                        
                             <form action="" method="POST">  {% csrf_token %}
                                 
                             {% for field in form %}
-                            
+                            <div class="search-bar-tablecell">
                                 {{ field.errors }}
                                  <p style="color:white; font-size: 7px;"> {{field.help_text}} </p>
                                 {{ field.widget }}
                                 {{ field }}
-                            
+                            </div>
                             {% endfor %} 
                             <div class="search-bar-tablecell">
                             <button type="submit"> Registrarse <i class="fas fa-paper-plane"></i></button>
                             
                             </div>   
-                        </div>
+                        
                             
                         </form>
                     </div>
