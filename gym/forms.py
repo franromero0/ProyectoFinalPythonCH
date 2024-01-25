@@ -70,14 +70,15 @@ class EditarUsuario(UserCreationForm):
                                         first_name = forms.CharField(required=False,
                                                                 max_length=100,label="Nombre",
                                                                 widget=forms.TextInput(attrs={'placeholder': 'Ingrese su nombre', 'style': 'font-size: 12px; color: white;'
-                                                                                                            }))
+                                                                                                        }))
+                                        
                                         email = forms.EmailField(required=False,label="Correo electronico",widget=forms.EmailInput(attrs={'placeholder': 'Ingrese su email', 'style': 'font-size: 12px; color: white;'}))
                                         password1 = forms.CharField(required=False,max_length=100, label="Ingrese la contraseña", widget=forms.PasswordInput(attrs={'placeholder': '********', 'style':'color: white;}'}))
                                         password2 = forms.CharField(required=False,max_length=100, label="Confirme la contraseña", widget=forms.PasswordInput(attrs={'placeholder': '********', 'style':'color: white;}'}))
                                         
                                         class Meta:
                                             model = User 
-                                            fields = [ "first_name","username", "email", "password1", "password2"] 
+                                            fields = [ "first_name", "email", "password1", "password2"] 
                                     
                                     
 
@@ -128,7 +129,7 @@ class OutDoorForm(forms.ModelForm):
     
     date = forms.DateField(help_text="Fecha del evento",widget=forms.DateInput(attrs={'type': 'date'}))
     class Meta:
-                model = OutDoor9374aa96f706f860f2ffe2e1e5f7d1257821acd2 
+                model = OutDoor
                 fields = ['titulo_evento','image', 'deport','lugar_salida','short_description','description','date']
 
 ########################################################################################################### 

@@ -90,6 +90,7 @@ def update_profile(request):
             info = formulario.cleaned_data
             
             usuario_actual.first_name = info["first_name"]
+            
              #Del dict info buscamos lo que escribio en cada campo y reemplazamos el que ya existe con el .first_name por ejemplo (es el nombre de los campos del form o DB)
             usuario_actual.email = info["email"]
             usuario_actual.save()
@@ -97,8 +98,9 @@ def update_profile(request):
             return render(request,"gym/index_2.html")
     
     else:
-        formulario = EditarUsuario(initial={"first_name":usuario_actual.first_name,"email":usuario_actual.email, "username":usuario_actual.username})
-    return render(request,'registros/update_profile.html',{"form":formulario})
+        usuario = usuario_actual.username
+        formulario = EditarUsuario(initial={"first_name":usuario_actual.first_name,"email":usuario_actual.email})
+    return render(request,'registros/update_profile.html',{"form":formulario, "usuario":usuario})
 
     
 
