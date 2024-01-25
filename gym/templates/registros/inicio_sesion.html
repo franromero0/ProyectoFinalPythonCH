@@ -16,12 +16,17 @@
 						<div class="hero-text-tablecell">
 							<p class="subtitle">by Franci's GYM</p>
 							<h1>Iniciar sesión</h1>
+						
+							<h2> {{ mensaje }} </h2>
+						
 							<form action="" method="POST">  {% csrf_token %}
                                 
 								{% for field in form %}
 								<div class="search-bar-tablecell">
-									{{ field.errors }}
+									
+								
 									{{ field.label }}
+									
 									{{ field.widget }}
 									{{ field }}
 								</div>

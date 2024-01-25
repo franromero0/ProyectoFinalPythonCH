@@ -75,9 +75,11 @@ def inicio_sesion(request):
                 login(request,user_actual)
                 return render(request, "gym/index_2.html", {"mensaje": f"Hola de nuevo, {usuario}"})
             else:
-                return render(request,'gym/index_2.html', {",mensaje": f"Error al iniciar sesión {usuario}"})
+                mensaje = f"Error al iniciar sesión con el usuario: {usuario}"
+                return render(request,'registros/inicio_sesion.html',{"mensajes": mensaje})
     else: 
         formulario = AuthenticationFormulario()
+        
     return render(request,"registros/inicio_sesion.html", {'form': formulario})
 
 
