@@ -4,9 +4,9 @@ Comisión: 50195
 Alumno: Francisco Romero
 
 ## Nombre del Proyecto
-Franci's GYM & OutDoor
+# **Franci's GYM & OutDoor**
 
-![URL de la imagen](https://i.imgur.com/zhwhbLs.png)]
+![URL de la imagen](https://i.imgur.com/zhwhbLs.png)
 
 
 
