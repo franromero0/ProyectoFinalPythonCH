@@ -1,0 +1,58 @@
+{% extends "gym/Aservicios.html" %}
+{% block title %}
+	<title>Agregar actividad</title>
+	{% endblock %}
+{% block tituloprincipal %}
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Se agregará al feed o page del gym</p>
+                    <h1>Añadir una nueva actividad disponible en el gimnasio</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block news %}
+<div class="hero-area hero-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                        <form action="" method="POST" enctype="multipart/form-data">  {% csrf_token %}
+                                
+                            {% for field in form %}
+                            <div class="search-bar-tablecell">
+                                {{ field.errors }}
+                                 <p style="color:white; font-size: 12px;"> {{field.help_text}} </p>
+                                {{ field.widget }}
+                                {{ field }}
+                            </div>
+                            {% endfor %} 
+                            <div class="search-bar-tablecell">
+                            <button type="submit"> Subir actividad </button>
+                            </div>
+                            
+                        
+                        </div>
+                             
+                            
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

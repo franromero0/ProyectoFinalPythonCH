@@ -1,0 +1,112 @@
+{% extends "gym/Aservicios.html" %}
+{% block title %}
+	<title>Aire libre</title>
+	{% endblock %}
+{% block tituloprincipal %}
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Aventurate con nosotros</p>
+                    <h1>Aire libre</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="pagination-wrap">
+					<ul>
+						<li><a href="{% url 'newEvent' %}">Agregar evento futuro (admin)</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+
+
+{% block news %}
+	<!-- latest news -->
+	<div class="latest-news mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				{% for evento in events %}
+
+				<div class="col-lg-4 col-md-6">
+					<div class="single-latest-news">
+						<div class="latest-news-bg ">
+							
+
+							
+							{% if evento.image %}
+							<a href="/activity/{{ evento.id }}/"><img src="{{ evento.image.url }}" alt=""> </a>	
+							{% endif %}
+						</div>
+
+						<div class="news-text-box">
+							<br>
+							<h3><a href="/activity/{{ evento.id }}/">{{ evento.titulo_evento}}</a></h3>
+							<p class="blog-meta">
+								<span class="author"><i class="fas fa-user"></i> {{ evento.deport }} </span>
+								<span class="date"><i class="fas fa-calendar"></i> {{evento.date}}</span>
+							</p>
+							<p class="excerpt">
+                                {{ evento.short_description }}</p>
+					
+							
+							<a href="/activity/{{ evento.id }}/" class="read-more-btn">ver más <i class="fas fa-angle-right"></i></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="/edit/event/{{ evento.id }}/" class="read-more-btn">editar </a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="" class="read-more-btn"></a>
+							<a href="/delete/event/{{ evento.id }}/" class="read-more-btn">eliminar </a>
+						
+
+
+						</div>
+					</div>
+				</div>
+			
+				
+			
+			
+					{% endfor %}
+			
+
+		
+				<div class="container">
+				
+						<div class="col-lg-12 text-center">
+							<div class="pagination-wrap">
+								<ul>
+									<li><a href="{% url 'newEvent' %}">Agregar evento futuro (admin)</a></li>
+									
+								</ul>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- end latest news -->
+	{% endblock %}

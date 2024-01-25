@@ -1,0 +1,43 @@
+{% extends "gym/index.html" %}
+
+{% block iniciosesion %}
+<div class="hero-area hero-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                        
+                            <div class="search-bar-tablecell">
+                               <h1>{{mensaje}}</h1> 
+                            <button type="submit" > <a style="color:white"href="{% url 'signup' %}">Volver al inicio <i class="fas fa-paper-plane"></i> </a></button>
+                            </div>
+                    </div>
+   
+                           
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	{% endblock %}
+	{% block features %}
+	{% endblock %}
+    {% block product %}
+    {% endblock %}
+	{% block banner %}
+	{% endblock %}
+	{% block testimonial %}
+	{% endblock %}
+	{% block advertisement %}
+	{% endblock %}
+	{% block shop %}
+	{% endblock %}
+	{% block news %}
+	{% endblock %}
+	{% block logo %}
+	{% endblock %}
+    {% block down %}
+    {% endblock %}

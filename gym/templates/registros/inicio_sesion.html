@@ -1,0 +1,56 @@
+{% extends "gym/index.html" %}
+
+{% block iniciosesion %}
+	<!-- hero area -->
+	<div class="hero-area hero-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+							<p class="subtitle">by Franci's GYM</p>
+							<h1>Iniciar sesión</h1>
+							<form action="" method="POST">  {% csrf_token %}
+                                
+								{% for field in form %}
+								<div class="search-bar-tablecell">
+									{{ field.errors }}
+									{{ field.label }}
+									{{ field.widget }}
+									{{ field }}
+								</div>
+								{% endfor %} 
+								<div class="search-bar-tablecell">
+								<button type="submit"> Iniciar sesión <i class="fas fa-paper-plane"></i></button>
+								</div>
+						
+							</form>
+							<div class="hero-btns">
+								<a href="{% url 'signup' %}" class="bordered-btn">Registrarse</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end hero area -->
+	{% endblock %}
+	{% block features %}
+	{% endblock %}
+    {% block product %}
+    {% endblock %}
+	{% block banner %}
+	{% endblock %}
+	{% block testimonial %}
+	{% endblock %}
+	{% block advertisement %}
+	{% endblock %}
+	{% block shop %}
+	{% endblock %}
+	{% block news %}
+	{% endblock %}
+	{% block logo %}
+	{% endblock %}
+    {% block down %}
+    {% endblock %}

@@ -1,0 +1,94 @@
+{% extends "gym/Aservicios_2.html" %}
+{% block title %}
+	<title>GYM</title>
+	{% endblock %}
+	{% block tituloprincipal %}
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+                        <p>Encontrá lo que te gusta</p>
+                        <h1>GYM</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="pagination-wrap">
+						<ul>
+							<li><a href="{% url 'new gym' %}">Agregar actividad del gimnasio (admin)</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
+{% block team %}
+<!-- team section -->
+<div class="mt-150">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="section-title">
+					<h3>Nuestras <span class="orange-text">Actividades</span></h3>
+					<p>Servicios que se brindan en nuestras instalaciones</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		{% for evento in events %}
+			<div class="col-lg-6 col-md-6">
+				<div class="single-team-item">
+					<div class="team-bg team-">
+						{% if evento.image %}
+						<a href="/deports/{{evento.id}}/"><img src="{{ evento.image.url }}" height="400px" width="600px" alt=""> </a>	
+						{% endif %}
+					</div>
+					<h4>{{ evento.activity }} <p class="excerpt"> Profe/s: {{ evento.prof }}</p></h4>
+					<ul class="social-link-team">
+                        <a href="/deports/{{evento.id}}/" class="boxed-btn">Saber más</a>
+						<a  class="read-more-btn"></a>
+						<a  class="read-more-btn"></a>
+						<a  class="read-more-btn"></a>
+						<a href="/edit/gym/{{ evento.id }}/" class="read-more-btn">editar </a>
+						<a  class="read-more-btn"></a>
+						<a  class="read-more-btn"></a>
+						<a  class="read-more-btn"></a>
+						<a href="/delete/gym/{{ evento.id }}/" class="read-more-btn">eliminar </a>
+					</ul>
+				</div>
+			</div>
+		{% endfor %}
+
+		
+			<div class="container">
+				
+					<div class="col-lg-12 text-center">
+						<div class="pagination-wrap">
+							<ul>
+								<li><a href="{% url 'new gym' %}">Agregar actividad del gimnasio (admin)</a></li>
+								
+							</ul>
+						</div>
+					
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+			
+{% endblock %}
+
+

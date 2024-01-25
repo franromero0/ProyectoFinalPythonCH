@@ -1,0 +1,63 @@
+{% extends "gym/Aservicios.html" %}
+{% block title %}
+	<title>Aire libre</title>
+	{% endblock %}
+{% block tituloprincipal %}
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Para mostrar la funcionalidad pero</p>
+                    <p>Deberías ser administrador para acceder a este formulario</p>
+                    <h1>Añadir un nuevo evento</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block news %}
+
+<div class="hero-area fondo-formu">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                        <form action="" method="POST" enctype="multipart/form-data">  {% csrf_token %}
+                                
+                            {% for field in form %}
+                            <div class="search-bar-tablecell">
+                                {{ field.errors }}
+                                 <h4 style="color:white; font-size: 16px;"> <b>{{field.help_text}} </b></h4>
+                                {{ field.widget }}
+                                {{ field }}
+                            </div>
+                            {% endfor %} 
+                            <div class="search-bar-tablecell">
+                            <button type="submit"> Agregar </button>
+                            </div>
+                            
+                        
+                        </div>
+                             
+                            
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

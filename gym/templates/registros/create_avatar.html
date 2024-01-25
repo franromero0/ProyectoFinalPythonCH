@@ -1,0 +1,60 @@
+{% extends "gym/index.html" %}
+
+{% block iniciosesion %}
+<div class="hero-area hero-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                        <h3 style="color: white;">Si quieres puedes subir tu avatar </h3>
+                            <p class="subtitle">opcional</p>	
+                        <form action="" method="POST" enctype="multipart/form-data">  {% csrf_token %}
+                                
+                            {% for field in form %}
+                            <div class="search-bar-tablecell">
+                                {{ field.errors }}
+                                 <p style="color:white; font-size: 12px;"> {{field.help_text}} </p>
+                                {{ field.widget }}
+                                {{ field }}
+                            </div>
+                            {% endfor %} 
+                            <div class="search-bar-tablecell">
+                                <a href="{% url 'update avatar' %}" class="bordered-btn">Añadir avatar</a>
+                                <br>
+                            <p class="subtitle">O</p>
+                            <a href="{% url 'Inicio' %}" class="bordered-btn">Ir a Inicio</a>
+                            </div>
+                            
+                         
+                        </div>
+                             
+                            
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	{% endblock %}
+	{% block features %}
+	{% endblock %}
+    {% block product %}
+    {% endblock %}
+	{% block banner %}
+	{% endblock %}
+	{% block testimonial %}
+	{% endblock %}
+	{% block advertisement %}
+	{% endblock %}
+	{% block shop %}
+	{% endblock %}
+	{% block news %}
+	{% endblock %}
+	{% block logo %}
+	{% endblock %}
+    {% block down %}
+    {% endblock %}
+

@@ -1,0 +1,111 @@
+{% extends "gym/index.html" %}
+	{% block iniciosesion %}
+	<!-- home page slider -->
+	<div class="homepage-slider">
+		<!-- single home slider -->
+		<div class="single-homepage-slider homepage-bg-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
+						<div class="hero-text">
+							<div class="hero-text-tablecell">
+								<p class="subtitle">Aventurate con nosotros</p>
+								<h1>{% if mensaje != None %}
+									{{ mensaje }}
+									{% else %}
+									Explora la naturaleza.   <!-- PARA PONER UN MENSAJE EN EL SLIDER CUANDO NO SALE EL MENSAJE -->
+									{% endif %}</h1>
+								<div class="hero-btns">
+									<a href="{% url 'outdoor' %}" class="boxed-btn">Ver más</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- single home slider -->
+		<div class="single-homepage-slider homepage-bg-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1 text-center">
+						<div class="hero-text">
+							<div class="hero-text-tablecell">
+								<p class="subtitle">Actividades para vos</p>
+								<h1>Senderismo y fitness.</h1>
+								<div class="hero-btns">
+									<a href="{% url 'outdoor' %}" class="boxed-btn">Actividades al aire libre</a>
+									<a href="{% url 'gym' %}" class="bordered-btn">Gimnasio</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- single home slider -->
+		<div class="single-homepage-slider homepage-bg-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1 text-right">
+						<div class="hero-text">
+							<div class="hero-text-tablecell">
+								<p class="subtitle">BY FRANCI'S GYM </p>
+								<h1>Sport Center</h1>
+								<div class="hero-btns">
+									<a href="{% url 'about' %}" class="boxed-btn">Conoce más</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end home page slider -->
+ {% endblock %}
+
+ {% block features %}
+ {% endblock %}
+
+ {% block product %}
+ {% endblock %}
+ {% block testimonial %}
+ {% endblock %}
+ {% block advertisement %}
+<!-- advertisement section -->
+<div class="abt-section mb-150">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12">
+				<div class="abt-bg">
+					<a href="https://www.youtube.com/watch?v=J4oz7WJWYMw" class="video-play-btn popup-youtube"><i class="fas fa-play"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12">
+				<div class="abt-text">
+					<p class="top-sub">Enero 2024</p>
+					<h2>Video <span class="orange-text">Muestra</span></h2>
+					<p>Este es un pequeño video donde muestro las funcionalidades de la página en sí</p>
+					<a href="{% url 'about' %}" class="boxed-btn mt-4">Saber más</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end advertisement section -->
+{% endblock %}
+{% block shop %}
+<!-- shop banner -->
+<section class="shop-banner">
+	<div class="container">
+		<h3>¿Estas listo <br>  <span class="orange-text">para esta aventura?</span></h3>
+		<br>
+		<br>
+		<a href="{% url 'outdoor' %}" class="cart-btn btn-lg">Ver actividades OutDoor</a>
+	</div>
+</section>
+<!-- end shop banner -->
+{% endblock %}

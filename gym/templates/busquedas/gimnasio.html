@@ -1,0 +1,108 @@
+{% extends 'busquedas/eventos.html' %}
+
+{% block tituloprincipal %}
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Resultados debajo</p>
+                    
+                        <h1>Resultados de su busqueda</h1>
+                    
+                
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+{% endblock %}
+{% block article %}
+<div class="container">	
+    <div class="row">
+        <div class="col-lg-7 text-right">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        <div>
+                    <form action="{% url 'gym result' %}" method="GET" > {% csrf_token %}
+
+                       <h3> Busca un evento por nombre o titulo:</h3> <input type="text" name="busqueda_gym_nombre" >
+                                        <input type="submit" value="Buscar" >
+
+                    </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+                    <form action="{% url 'gym result' %}" method="GET" > {% csrf_token %}
+
+                        <h3> Busca un evento por profesor:</h3> <input type="text" name="busqueda_gym_profesor" >
+                                        <input type="submit" value="Buscar" >
+
+                    </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+                    <form action="{% url 'gym result' %}" method="GET" > {% csrf_token %}
+
+                        <h3>Busca un evento por id:</h3> <input type="text" name="busqueda_gym_id" >
+                                        <input type="submit" value="Buscar" >
+
+                    </form>
+        </div>
+         
+        </div>
+    </div>
+</div>
+
+	{% endblock %}
+
+
+
+{% block resultados %}
+
+<div class="latest-news mt-150 mb-150">
+   
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <h2 class="pb-3 ">Resultados <span class="orange-text">de su búsqueda</span></h2>
+                    <a href="{% url 'search event' %}">  <p> volver a buscar </p></a>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            {% for result in results %}
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-news">
+                    <a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
+                    <div class="news-text-box">
+                        <h3><a href="single-news.html">{{ result.titulo_evento }}</a></h3>
+                        <p class="blog-meta">
+                            <span class="author"><i class="fas fa-user"></i> {{ result.deport }} </span>
+                            <span class="date"><i class="fas fa-calendar"></i> {{ result.date }}</span>
+                        </p>
+                        <p class="excerpt">
+                            {{ result.short_description }}</p>
+                        <a href="single-news.html" class="read-more-btn">ver más <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

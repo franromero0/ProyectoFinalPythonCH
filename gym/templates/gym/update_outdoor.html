@@ -1,0 +1,74 @@
+{% extends "gym/Aservicios.html" %}
+{% block title %}
+	<title>Aire libre</title>
+	{% endblock %}
+{% block tituloprincipal %}
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+               <h1>Editar evento</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block news %}
+
+<div class="hero-area fondo-formu">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                        <form action="" method="POST">  {% csrf_token %}
+                                
+                            {% for field in form %}
+                            <div class="search-bar-tablecell">
+                                {{ field.errors }}
+                                
+                                 <h4 style="color:orange; font-size: 10px;"> <b>{{ field.help_text }} </b>
+                               
+                                <h4 style="font-size: 10px;"></h4>
+                               {{ field }}
+                            </div>
+                            {% endfor %} 
+                            <div class="search-bar-tablecell">
+                            <button type="submit"> Modificar </button>  
+                             </div>
+                            </form>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="background-color:#051922;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+{% endblock %}

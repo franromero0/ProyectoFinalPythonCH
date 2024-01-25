@@ -1,0 +1,101 @@
+{% extends 'busquedas/eventos.html' %}
+
+{% block tituloprincipal %}
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Resultados debajo</p>
+                    
+                        <h1>Resultados de su busqueda</h1>
+                        <h3><a href="{% url 'outdoor' %}">{{ mensaje }} </a></h3>
+                    
+                
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+{% endblock %}
+{% block article %}
+<div class="container">	
+    <div class="row">
+        <div class="col-lg-12 ">
+        <br>
+        <div>
+                    <form action="{% url 'event result' %}" method="GET" > {% csrf_token %}
+
+                       <h3> Busca un evento por nombre:</h3> <input type="text" name="busqueda_evento_nombre" >
+                                        <input type="submit" value="Buscar" >
+
+                    </form>
+        </div>
+    </div>
+</div>
+
+	{% endblock %}
+
+
+
+{% block resultados %}
+
+<div class="latest-news mt-150 mb-150">
+   
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <h2 class="pb-3 ">Resultados <span class="orange-text">de su búsqueda</span></h2>
+                    <a href="{% url 'search event' %}">  <p> volver a buscar </p></a>
+                    <br>
+                    <br>
+                </div>
+            </div>
+           
+            {% for evento in events %}
+
+<div class="col-lg-4 col-md-6">
+    <div class="single-latest-news">
+        <div class="latest-news-bg ">
+            
+
+            
+            {% if evento.image %}
+            <a href="/activity/{{ evento.id }}/"><img src="{{ evento.image.url }}" alt=""> </a>	
+            {% endif %}
+        </div>
+
+        <div class="news-text-box">
+            <br>
+            <h3><a href="/activity/{{ evento.id }}/">{{ evento.titulo_evento}}</a></h3>
+            
+            <p class="blog-meta">
+                <span class="author"><i class="fas fa-user"></i> {{ evento.deport }} </span>
+                <span class="date"><i class="fas fa-calendar"></i> {{evento.date}}</span>
+            </p>
+            <p class="excerpt">
+                {{ evento.short_description }}</p>
+    
+            
+            <a href="/activity/{{ evento.id }}/" class="read-more-btn">ver más <i class="fas fa-angle-right"></i></a>
+            
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    {% endfor %}
+    
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
